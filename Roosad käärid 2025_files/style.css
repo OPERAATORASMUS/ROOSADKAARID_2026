@@ -1,0 +1,809 @@
+/*
+  Theme Name: TheEvent
+  Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General 
+Värvid:
+
+#98459f roosakas
+#569546 roheline
+#c9228c hele roosa
+#e4e8e9 off white
+#7fa9cf sky blue
+#4698c7 tumedam sinine
+#152b00 earthy roheline
+--------------------------------------------------------------*/
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #f82249;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.main-page {
+  margin-top: 70px;
+}
+
+.wow {
+  visibility: hidden;
+}
+
+/* Prelaoder */
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #f82249;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s ease-in-out;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  padding-top: 6px;
+}
+
+.back-to-top:focus {
+  background: #e0072f;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #e0072f;
+  color: #fff;
+}
+
+/* Sections Header
+--------------------------------*/
+
+#header ul li .social-links a {
+  font-size: 20px;
+  display: inline-block;
+  background: #ea00ff;
+  color: #000000;
+  line-height: 1;
+  padding: 10px 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+#header ul li .social-links a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #ea00ff;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.section-with-bg {
+  background-color: #dfe2de;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+  height: 90px;
+  padding: 25px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header.header-scrolled,
+#header.header-fixed {
+  background: #000000;
+  height: 70px;
+  padding: 15px 0;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 480px) { /* Mobile Phones */
+  #header.header-scrolled,
+  #header.header-fixed {
+    height: 100px;
+  }
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 span {
+  color: #770117;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+  color: #ea00ff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 50px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Nav Menu Essentials */
+
+.nav-menu,
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+
+#nav-menu-container .nav-buts{
+  display: flex;
+  float: right;
+  margin: 0;
+}
+
+/* Nav Meu Styling */
+
+.nav-buts a {
+  padding: 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(187, 0, 255, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-buts .menu-active a,
+.nav-buts a:hover {
+  color: #fff;
+}
+
+.nav-buts > li {
+  margin-left: 8px;
+}
+
+.nav-buts > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ea00ff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-buts a:hover:before,
+.nav-buts li:hover > a:before,
+.nav-buts .menu-active > a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-menu li.buy-tickets a {
+  color: #fff;
+  background: #ea00ff;
+  padding: 7px 22px;
+  border-radius: 50px;
+  border: 2px solid #ea00ff;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 2px;
+  line-height: 1;
+  font-size: 13px;
+}
+
+.nav-menu li.buy-tickets a:hover {
+  background: none;
+}
+
+.nav-buts li.buy-tickets:hover a:before,
+.nav-buts li.buy-tickets.menu-active a:before {
+  visibility: hidden;
+}
+
+.nav-buts ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+  border-radius: 3px;
+}
+
+.nav-buts ul li {
+  transition: 0.3s;
+}
+
+.nav-buts ul li a {
+  padding: 15px;
+  color: #060c22;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+  border-radius: 5px;
+}
+
+.nav-buts ul li:hover > a {
+  background: #ff00ae;
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+#intro {
+  margin: -150px 0 -5px 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://iili.io/KDPkDXa.png);
+  background-color: #000000; 
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  transform: skewY(-6deg);
+  z-index: 1;
+}
+
+
+
+#intro .intro-container {
+  transform: skewY(6deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 90px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+#m66du {
+  color: #ea00ff !important; 
+} 
+
+#intro h1 {
+  color: #ebebeb;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  justify-content: center;
+  max-width: 90%; /* Constrain width with some padding */
+  font-size: 5vw; /* Responsive font size */
+  word-wrap: break-word; /* Wrap text if it's too long */
+}
+
+@media only screen and (max-width: 768px) { /* Tablets */
+  #intro h1 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) { /* Mobile Phones */
+  #intro h1 {
+    font-size: 2.2rem;
+    padding-top: 100px;
+  }
+}
+
+#intro h1 span {
+  color: #f82249;
+}
+
+#intro p {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#intro .about-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #ea00ff;
+}
+
+#intro .about-btn:hover {
+  background: #ea00ff;
+  color: #fff;
+}
+/*--------------------------------------------------------------
+# Section swap
+--------------------------------------------------------------*/
+#invis {
+  font-size: 8px;
+}
+
+#scrolling-text {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: #ea00ff;
+  color: #000000;
+  transform: skewY(-6deg);
+  z-index: 3;
+}
+
+#scrolling-text span {
+  animation: scrollText 60s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+      transform: translateX(-100%); /*et teist pidi panna ss alustada 0% pealt kuni -100% peale*/
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+/*--------------------------------------------------------------
+# Kirjeldus
+---------------------------------------------------------------*/
+#kirjeldus {
+  margin: auto;
+  padding: 60px;
+  overflow: hidden;
+  background: #000000;
+}
+
+#kirjeldus p{
+  font-weight: 700px;
+  line-height: 32px;
+  margin: 30px 0;
+  text-align: justify;
+}
+
+#kirjeldus p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1em; 
+
+}
+
+.row {
+  display: -webkit-box; 
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+.column {
+  flex: 1; /* Each column takes equal width */
+  padding: 10px; /* Adds padding inside each column */
+}
+.column:not(:last-child) {
+  border-right: 2px solid #ea00ff; 
+  padding-right: 40px;
+}
+.column:last-child {
+  padding-left: 40px;
+}
+
+#telokirjeldus {
+  display: none ;
+}
+
+/* Kui ekraan on vaike */
+
+@media screen and (max-width: 768px) {
+  #kirjeldus p {
+      display: none;
+  }
+  .column {
+    display: none;
+    
+  }
+
+  .column:not(:last-child) {
+    border-right: none
+  }
+  
+  #telokirjeldus {
+    display: flex;
+  
+  }
+  #telokirjeldus p {
+    display: flex;
+    font-weight: 700px;
+    line-height: 32px;
+    text-align: justify;
+    padding: 40px;
+    margin-top: -100px;
+  
+  }
+  }
+  
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+#gallery {
+  margin: -100px 0 0 0;
+  padding: 50px;
+  overflow: hidden;
+  background: #000000;
+}
+#galerii {
+  margin-top:  40px;;
+}
+
+#gallery .owl-nav,
+#gallery .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#gallery .owl-item {
+  border-left: 2px solid #ea00ff;
+  border-right: 2px solid #ea00ff;
+  border-bottom: 4px solid #ea00ff;
+  border-top: 4px solid #ea00ff;
+}
+
+#gallery .owl-dot {
+  display: inline-block;
+  margin: 50px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+#gallery .owl-dot.active {
+  background-color: #ea00ff;
+}
+
+#gallery .gallery-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+#gallery .gallery-carousel .center {
+  border: 6px solid #ea00ff;
+  margin: -10px;
+  box-sizing: content-box;
+  padding: 4px;
+  background: #000000;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# Section swap 2
+--------------------------------------------------------------*/
+#invis2 {
+  font-size: 8px;
+}
+
+#scrolling-text2 {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: #ea00ff;
+  color: #000000;
+  transform: skewY(4deg);
+  z-index: 3;
+}
+
+#scrolling-text2 span {
+  animation: scrollText 60s linear infinite;
+}
+
+/*--------------------------------------------------------------
+# supporters Section
+--------------------------------------------------------------*/
+
+#supporters {
+  padding: 100px 0;
+  transform: skewY(4deg);
+  margin-bottom: -100px;
+}
+
+#supporters .supporters-wrap {
+  border-top: 1px solid #0033ff;
+  border-left: 1px solid #e0e5fa;
+  margin-bottom: 60px;
+  transform: skewY(-4deg);
+  position: relative;
+  z-index: 2;
+}
+
+#supporters .supporter-logo {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  height: 160px;
+}
+
+#supporters .supporter-logo:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transform: skewY(-4deg);
+}
+
+#supporters img {
+  transition: all 0.4s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+
+
+
+#footer {
+  background: #000000;
+  padding: 0 0 25px 0;
+  color: #eee;
+  font-size: 14px;
+  display: inline;
+  flex-wrap: nowrap;
+}
+#footer .footer-top {
+  background: #000000;
+  z-index: 3;
+  position: relative;
+  padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+#footer .footer-top .footer-info h3 {
+  font-size: 26px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+#footer .footer-top .footer-info img {
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ea00ff;
+
+
+
+  .card-img-top {
+  width: 70%;
+  margin: 15px auto;
+  display: block;
+}
+
+
+
+
+ .card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+}
