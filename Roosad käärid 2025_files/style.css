@@ -683,47 +683,34 @@ h6 {
 # supporters Section
 --------------------------------------------------------------*/
 
-#supporters {
-  padding: 100px 0;
-  transform: skewY(4deg);
-  margin-bottom: -100px;
+/* Background + Text Colors */
+.bg-pink-light {
+    background-color: #000000; /* light pink */
 }
 
-#supporters .supporters-wrap {
-  border-top: 1px solid #0033ff;
-  border-left: 1px solid #e0e5fa;
-  margin-bottom: 60px;
-  transform: skewY(-4deg);
-  position: relative;
-  z-index: 2;
+.text-pink-dark {
+    color: #ffffff; /* deep pink */
 }
 
-#supporters .supporter-logo {
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  height: 160px;
+.text-pink-darker {
+    color: #ffffff; /* stronger pink */
 }
 
-#supporters .supporter-logo:hover img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  transform: skewY(-4deg);
+/* Supporter Card */
+.supporter-card {
+    background-color: #000000; /* soft pink */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-#supporters img {
-  transition: all 0.4s ease-in-out;
+.supporter-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #ea00ff;
+}
+
+.supporter-img {
+    border: 3px solid #000000; /* image pink border */
+    height: 140px;
+    object-fit: cover;
 }
 
 /*--------------------------------------------------------------
