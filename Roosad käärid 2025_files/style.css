@@ -653,6 +653,187 @@ h6 {
   background: #000000;
   z-index: 1;
 }
+/* --- Ticket Card Styles --- */
+
+
+/* --- Ticket Card Styles --- */
+
+.ticket-card {
+  background-color: #000;
+  border: 2px solid #ea00ff;
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(234, 0, 255, 0.1);
+  
+  /* Size and Hardware Acceleration */
+  width: 280px; /* Fixed width */
+  max-width: 100%;
+  margin: 0 auto;
+  will-change: transform; /* Optimizes animation performance */
+  backface-visibility: hidden; /* Prevents blur on hover */
+}
+
+/* Hover Effect - Smoother Lift */
+.ticket-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(234, 0, 255, 0.4);
+  border-color: #ff55ff;
+}
+
+/* Image Wrapper */
+.ticket-card .img-wrapper {
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  height: 160px; /* Slightly reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-card img {
+  width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* Image Hover - Subtle Rotate */
+.ticket-card:hover img {
+  transform: scale(1.08) rotate(2deg); /* Reduced rotation for cleaner look */
+}
+
+/* Card Body */
+.ticket-card .card-body {
+  padding: 1rem;
+}
+
+.ticket-card .card-title {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  color: #ea00ff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-card .card-text {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+  color: #ddd; /* Slightly softer white for text */
+}
+
+/* Footer & Button */
+.ticket-card .card-footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(234, 0, 255, 0.3);
+  padding: 15px;
+}
+
+.ticket-btn {
+  background-color: #ea00ff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 2px solid #ea00ff;
+  width: 100%;
+  padding: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ticket-btn:hover {
+  background-color: transparent;
+  color: #ea00ff;
+  box-shadow: 0 0 15px #ea00ff;
+}
+
+/* --- VIP Variant --- */
+.ticket-vip {
+  border-color: #ffd700;
+}
+.ticket-vip .card-title {
+  color: #ffd700;
+}
+.ticket-vip .ticket-btn {
+  color: ;
+  background-color: #ffd700;
+  border-color: #ffd700;
+}
+.ticket-vip:hover {
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+  border-color: #ffed4a;
+}
+.ticket-vip .ticket-btn:hover {
+  color: #ffd700;
+  box-shadow: 0 0 15px #ffd700;
+}
+.ticket-vip .card-footer {
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* --- Supporter Variant --- */
+.ticket-supporter {
+  border-color: #00ffff;
+}
+.ticket-supporter .card-title {
+  color: #00ffff;
+}
+.ticket-supporter .ticket-btn {
+  background-color: #00ffff;
+  border-color: #00ffff;
+}
+.ticket-supporter:hover {
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+  border-color: #a3ffff;
+}
+.ticket-supporter .ticket-btn:hover {
+  color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+.ticket-supporter .card-footer {
+  border-top: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+
+/* --- Ticket Pricing Styles --- */
+
+.ticket-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 5px 0 15px 0;
+  font-family: "Raleway", sans-serif; /* Matches your header font */
+  letter-spacing: 1px;
+  
+  /* Default Pink Glow */
+  color: #ea00ff;
+  text-shadow: 0 0 20px rgba(234, 0, 255, 0.6);
+}
+
+/* VIP Price (Gold) */
+.ticket-vip .ticket-price {
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Supporter Price (Aqua) */
+.ticket-supporter .ticket-price {
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Optional: Hover Animation for Price */
+.ticket-card:hover .ticket-price {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
 
 /*--------------------------------------------------------------
 # Section swap 2
@@ -683,39 +864,95 @@ h6 {
 # supporters Section
 --------------------------------------------------------------*/
 
-/* Background + Text Colors */
-.bg-pink-light {
-    background-color: #000000; /* light pink */
+
+/* Custom Pink Colors (if not already defined in your theme) */
+:root {
+  --pink-light: #000000;
+  --pink-darker: #ea00ff;
+  --pink-accent: #ea00ff;
 }
 
-.text-pink-dark {
-    color: #ffffff; /* deep pink */
+.bg-pink-light {
+  background-color: var(--pink-light);
 }
 
 .text-pink-darker {
-    color: #ffffff; /* stronger pink */
+  color: var(--pink-darker);
 }
 
-/* Supporter Card */
-.supporter-card {
-    background-color: #000000; /* soft pink */
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+/* =========================================
+   SPONSOR CARD STYLES
+   ========================================= */
+
+/* Base Card Style */
+.sponsor-card {
+  background: #000000;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%; /* Ensures equal height in grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.supporter-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px #ea00ff;
+/* Hover Effect: Lifts up and increases shadow */
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-.supporter-img {
-    border: 3px solid #000000; /* image pink border */
-    height: 140px;
-    object-fit: cover;
+/* =========================================
+   LOGO CONTAINER (Crucial for alignment)
+   ========================================= */
+/* This forces all logos to fit within a specific box so they don't look messy */
+.logo-wrapper {
+  width: 100%;
+  height: 120px; /* Fixed height for small sponsors */
+  display: flex;
+  align-items: center;     /* Vertically Center */
+  justify-content: center; /* Horizontally Center */
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.logo-wrapper img {
+  max-height: 100%; /* Ensure image doesn't overflow container */
+  max-width: 100%;
+  object-fit: contain; /* Keeps aspect ratio intact */
+}
+
+/* =========================================
+   MAIN SPONSOR MODIFIERS
+   ========================================= */
+
+/* Make the main card visually distinct */
+.sponsor-card.main-sponsor {
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Subtle pink border */
+  padding: 3rem !important;
+}
+
+/* Make the main sponsor logo area much bigger */
+.sponsor-card.main-sponsor .logo-wrapper {
+  height: 180px; 
+}
+
+/* Main Sponsor Text */
+.sponsor-card.main-sponsor h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+
 
 
 
