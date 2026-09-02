@@ -1,463 +1,217 @@
 <!DOCTYPE html>
-<html lang="et"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>Roosad käärid 2026</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- Siia saab descriptioni kirj, et parem web reach oleks--> 
-  <meta content="Fashion, Roosa, moekonkurss, Käärid, Eesti, Mood, Show, Disainer, Trend, Kool, Rocca al Mare, Fotograafia, Models, Modellid, Collections, Kollektsioonid, Noored" name="keywords">
-  <meta content="Roosad Käärid 2026 - koolinoorte moekonkurss. Selle aasta teema on “IMPULSS”, kirjuta juurde blalaa" name="description">
-
-  <!-- Favicons -->
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roosad Käärid 2027</title>
+  <meta name="keywords" content="Fashion, Roosa, moekonkurss, Käärid, Eesti, Mood, Show, Disainer, Trend, Kool, Rocca al Mare, Fotograafia, Models, Modellid, Collections, Kollektsioonid, Noored">
+  <meta name="description" content="Roosad Käärid 2027 coming soon. Koostöösoovide korral kirjuta meile.">
   <link rel="icon" href="veits pixeldatud.jpg">
-
-  <!-- Google Fonts -->
   <link href="./Roosad käärid 2025_files/css" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ea00ff;
+      --black: #000000;
+      --white: #ffffff;
+    }
 
-  <!-- Bootstrap CSS File -->
-  <link href="./Roosad käärid 2025_files/bootstrap.min.css" rel="stylesheet">
+    * {
+      box-sizing: border-box;
+    }
 
-  <!-- Libraries CSS Files -->
-  <link href="./Roosad käärid 2025_files/font-awesome.min.css" rel="stylesheet">
-  <link href="./Roosad käärid 2025_files/animate.min.css" rel="stylesheet">
-  <link href="./Roosad käärid 2025_files/venobox.css" rel="stylesheet">
-  <link href="./Roosad käärid 2025_files/owl.carousel.min.css" rel="stylesheet">
+    html,
+    body {
+      min-height: 100%;
+    }
 
-  <!-- Main Stylesheet File -->
-  <link href="./Roosad käärid 2025_files/style.css" rel="stylesheet">
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--black);
+      color: var(--pink);
+      font-family: "Open Sans", Arial, sans-serif;
+      overflow-x: hidden;
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    .brand-logo {
+      position: fixed;
+      top: clamp(20px, 4vw, 44px);
+      left: clamp(18px, 4vw, 46px);
+      width: clamp(70px, 9vw, 120px);
+      aspect-ratio: 1;
+      background-image: url("roosade logo mustal taustal.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden;
+    }
 
-  <!-- =======================================================
-    Theme Name: TheEvent
-    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-<script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension" src="chrome-extension://ncibgoaomkmdpilpocfeponihegamlic/token-signing-page-script.js"></script></head>
+    .brand-logo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--pink);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
 
-<body data-new-gr-c-s-check-loaded="14.1261.0" data-gr-ext-installed="">
+    .page {
+      display: grid;
+      width: 100%;
+      min-height: 100vh;
+      padding: clamp(32px, 7vw, 72px);
+      grid-template-rows: 1fr auto;
+      align-items: center;
+      overflow-x: hidden;
+      text-align: center;
+    }
 
-  <header id="header" class="header-scrolled">
-    <div class="container">
+    .coming-soon {
+      margin: 0 auto;
+      max-width: 1060px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
 
-      <div id="logo" class="pull-left">
-        <a href="https://roosad.ee/#intro" class="scrollto"><img src="valge logo no BG - Copy.png" alt="logo" title="logo" class="logo"></a>
-      </div>
-      <nav id="nav-menu-container">
-        <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-         <li>
-          <div class="social-links d-flex align-items-center">
-            <a href="https://www.facebook.com/RoosadKaarid" target="_blank" class="facebook me-2">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/roosadkaarid/" target="_blank" class="instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </li>
-          <div class="nav-buts">
-          <li class="menu-active"><a href="#intro">Üritus</a></li>
-          <li><a href="#galerii">Galerii</a></li>
-          <li><a href="#piletituubid">Piletitüübid</a></li>
-          <li><a href="#designer">Disainerile</a></li>
-          <li><a href="#Supporters">Toetajad</a></li>
-          <!--Siia href="" alla fienta api link kujul fienta.com/ürituse nimi -->
-          <li class="buy-tickets"><a href="https://lingi.ee/ROOSADEFIENTA">Piletimüük</a></li>
-        </div>
-        </ul>
-        
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+    .coming-soon span {
+      display: block;
+    }
 
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-    <div class="intro-container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-      <h1 class="mb-4 pb-0">Roosad Käärid 2026<br><span id="m66du"><i>IMPULSS</i></span></h1>
-      <p class="mb-4 pb-0">24. jaanuar 19:00, Rocca al Mare Kool</p>
-      <a href="https://lingi.ee/ROOSADEFIENTA" class="about-btn scrollto">PILETID</a>
-    </div>
-  </section>
+    .event-name {
+      color: var(--pink);
+      font-size: clamp(3.2rem, 6.8vw, 6.6rem);
+      text-shadow: 0 0 18px rgba(234, 0, 255, 0.72);
+    }
 
-  <main id="main">
-    <!--==========================
-      section swap
-    ============================-->
-      <div id="scrolling-text">
-          <span>[ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ]<span id="invis">ㅤ</span></span>
-          <span>[ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ]</span>
-      </div>
-    <!--==========================
-     Kirjeldus section
-    ============================-->
-    <section id="kirjeldus" class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;"> 
-      <div id="container">
-        <div class="section-header">
-          <h2>Üritusest</h2>
-        </div>
-        <div class="row">
-          <!--See muuta ära selle aasta kirjelduse peale vastavalt oma soovile-->
-          <div class="column">
-            
-              <p>Selle aasta teemaks on “IMPULSS”, mis sümboliseerib energiat, liikumist ja hetke, mil kõik muutub. See võib olla emotsioon, mõte või väike tõuge. Tänapäeva kiiresti arenevas ja infost küllastunud maailmas on oluline märgata sisemisi ja väliseid impulsse, mis meid suunavad ja kujundavad.</p>
-          </div>
-          <div class="column">
-              <p>Vormiliselt võib “IMPULSS” avalduda asümmeetrilistes lõigetes, ootamatutes materjalikooslustes ja värvides. Julgustame mängima kontrastidega: tugev – õrn, staatiline – voolav, kontrollitud – plahvatuslik. Innustame sind katsetama, tõlgendama ja mõtlema raamidest väljapoole, sest iga suur muutus saab alguse ühest väikesest impulsist.
-</p>
-            
-              
-          </div>
-      </div>
-      </div>
+    .event-year {
+      color: var(--pink);
+      font-size: clamp(2.7rem, 5.5vw, 5.4rem);
+      text-shadow: 0 0 16px rgba(234, 0, 255, 0.64);
+    }
 
-      
+    .soon {
+      margin-top: clamp(10px, 2vw, 20px);
+      color: var(--white);
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: clamp(1rem, 2vw, 1.85rem);
+      font-style: italic;
+      font-weight: 700;
+      text-shadow: none;
+    }
+
+    .contact {
+      display: flex;
+      width: min(100%, 520px);
+      margin: clamp(22px, 6vh, 48px) auto 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+
+    .contact p {
+      max-width: 100%;
+      margin: 0;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .contact a {
+      color: inherit;
+    }
+
+    .contact .email-link {
+      display: inline-block;
+      max-width: 100%;
+      color: var(--white);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .email-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 12px 32px;
+      border: 2px solid var(--pink);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--white);
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s;
+    }
+
+    .email-button:hover,
+    .email-button:focus {
+      background: var(--pink);
+      color: var(--white);
+      box-shadow: 0 0 22px rgba(234, 0, 255, 0.48);
+      outline: none;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 118px 22px 34px;
+      }
+
+      .brand-logo {
+        width: 62px;
+      }
+
+      .coming-soon {
+        max-width: 300px;
+        line-height: 1.02;
+      }
+
+      .event-name {
+        font-size: clamp(2rem, 9.2vw, 2.45rem);
+      }
+
+      .event-year {
+        font-size: clamp(1.8rem, 8vw, 2.1rem);
+      }
+
+      .soon {
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+      }
+
+      .contact {
+        gap: 16px;
+        font-size: 0.75rem;
+      }
+
+      .email-button {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="brand-logo" aria-hidden="true"></div>
+
+  <main class="page">
+    <h1 class="coming-soon">
+      <span class="event-name">Roosad Käärid</span>
+      <span class="event-year">2027</span>
+      <span class="soon">coming soon</span>
+    </h1>
+
+    <section class="contact" aria-label="Koostöö kontakt">
+      <p>Koostöösoovide korral kirjutage meile:<br><a class="email-link" href="mailto:roosadkaarid@gmail.com">roosadkaarid@gmail.com</a></p>
+      <a class="email-button" href="mailto:roosadkaarid@gmail.com">Kirjuta meile</a>
     </section>
-
-    <!--==========================
-     TeloKirjeldus section, see muuta ära selle aasta kirjelduse peale vastavalt oma soovile
-    ============================-->
-    <section id="telokirjeldus" class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"> 
-      <p>Roosad Käärid on üle-eestiline koolinoorte moekonkurss, mis pakub algajatele disaineritele võimalust presenteerida oma ainulaadset loomingut, eesmärgiga luua 8.-12. klassides õppivatele moehuvilistele hüppelaud laia moemaailma.
-        <br>
-        <br>
-        Selle aasta teemaks on “IMPULSS”, mis sümboliseerib energiat, liikumist ja hetke, mil kõik muutub. See võib olla emotsioon, mõte või väike tõuge. Tänapäeva kiiresti arenevas ja infost küllastunud maailmas on oluline märgata sisemisi ja väliseid impulsse, mis meid suunavad ja kujundavad. 
-        <br>
-        <br>
-        Roosad Käärid toimub 2025. aasta 24. jaanuaril kell 19:00 Rocca al Mare Kooli aulas.</p>
-    </section>
-     <!--==========================
-      Gallery Section
-    ============================-->
-
-    <section id="galerii">
-    
-    <div class="section-header"></div>
-     <div class="section-header">
-          <h2>GALERII</h2>
-   
-
-
-          
-    <p> Siin on pildid eelmise aasta Roosadest Kääridest "Flora & Fauna"</p>
-    <br>
-    <br>
-    </div>
-<div class="container my-4">
-  <div class="row justify-content-center">
-    
-    
-    <!-- Carousel 1 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-      <div id="carousel1" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 400px;">
-        <div class="carousel-inner rounded shadow-sm">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="IMG_1357.jpg" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1378.jpg" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1443.jpg" alt="Slide 3">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Carousel 2 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-      <div id="carousel2" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 400px;">
-        <div class="carousel-inner rounded shadow-sm">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="IMG_1453.jpg" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1545.jpg" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1564.jpg" alt="Slide 3">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Carousel 3 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-      <div id="carousel3" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 400px;">
-        <div class="carousel-inner rounded shadow-sm">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="IMG_1720.jpg" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1741.jpg" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1933.jpg" alt="Slide 3">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Carousel 4 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-      <div id="carousel4" class="carousel slide mx-auto" data-ride="carousel" style="max-width: 400px;">
-        <div class="carousel-inner rounded shadow-sm">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="IMG_1979.jpg" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_1987.jpg" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="IMG_2056.jpg" alt="Slide 3">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-</section>
-
-
-<!--==========================
-      pileti info
-    ============================-->
-<!-- Bootstrap 5 CSS (include in <head> if not already) -->
-
-<section id="piletituubid">
-
-  <div class="section-header"></div>
-     <div class="section-header">
-          <h2>PILETITÜÜBID</h2>
-   
-
-
-          
-    
-    <br>
-    <br>
-    </div>
-<div class="container my-4">
-  <div class="row justify-content-center">
-    
-
-
-    <!-- Regular Ticket -->
-    <div class="col-12 col-md-4">
-      <div class="card text-white h-100" style="background-color: #000; border: 2px solid #ea00ff;">
-        <img src="tavaline pilet ikoon.png" style="width: 60%;align-self: center;" class="card-img-top" alt="Regular Ticket">
-        <div class="card-body">
-          <h5 class="card-title"><strong>TAVALINE  </strong>15€</h5>
-          <p  class="card-text">
-            Tavapilet annab juurdepääsu ürituse üldalale ning tegevustele.
-          </p>
-        </div>
-        <div class="card-footer text-center" style="background-color: transparent; border-top: 1px solid #ea00ff;">
-          <a href="https://lingi.ee/ROOSADEFIENTA" class="btn" style="background-color: #ea00ff; color: black; font-weight: 600;">Osta pilet</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- VIP Ticket -->
-    <div class="col-12 col-md-4">
-      <div class="card text-white h-100" style="background-color: #000; border: 2px solid #ea00ff;">
-        <img src="vip pilet.png" style="width: 60%;align-self: center;" class="card-img-top" alt="VIP Ticket">
-        <div class="card-body">
-          <h5  style="color: yellow;" class="card-title"><strong>VIP </strong>25€</h5>
-          <p class="card-text">
-            VIP pilet sisaldab ligipääsu eri alale, kus saab tasuta jooke ja suupisteid. Lisaks saab VIP piletiga ligipääsu eraldi garderoobile. VIP piletiga on võimalus saada luksuslik kogemus.
-          </p>
-        </div>
-        <div class="card-footer text-center" style="background-color: transparent; border-top: 1px solid #ea00ff;">
-          <a href="https://lingi.ee/ROOSADEFIENTA" class="btn" style="background-color: #ea00ff; color: black; font-weight: 600;">Osta pilet</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Supporter Ticket -->
-    <div class="col-12 col-md-4">
-      <div class="card text-white h-100" style="background-color: #000; border: 2px solid #ea00ff;">
-        <img src="süda pilet.png" style="width: 60%;align-self: center;" class="card-img-top" alt="Supporter Ticket">
-        <div class="card-body">
-          <h5  style="color: aqua;" class="card-title"> <strong>TOETAJA </strong>40€</h5>
-          <p class="card-text">
-           Toetajapilet on mõeldud neile, kes soovivad Roosasi Kääre Toetada. Sisaldab VIP eeliseid, reserveeritud parkimiskohta ja pisikest kinkekotti.
-          </p>
-        </div>
-        <div class="card-footer text-center" style="background-color: transparent; border-top: 1px solid #ea00ff;">
-          <a href="https://lingi.ee/ROOSADEFIENTA" class="btn" style="background-color: #ea00ff; color: black; font-weight: 600;">Osta pilet</a>
-        </div>
-      </div>
-    </div>
-<br>
-
-
-<!-- Designer Section -->
-
-<div class="container my-4"></div>
-
-<section id="designer" class="py-5" style="background-color: #000; color: white; border-top: 2px solid #ea00ff; border-bottom: 2px solid #ea00ff;">
-  <div class="container text-center">
-    <h2 class="mb-4" style="color: #ffffff;"><strong>TULE ROOSADELE DISAINERIKS!</strong></h2>
-    <p class="mb-4" style="max-width: 700px; margin: 0 auto; color: #ffffff;">
-      Oled moelooja, kes soovib oma loomingut maailmale näidata?  
-      Registreeru disainerina ja saa osa Roosadest Kääridest.  
-      See on sinu hetk särada laval ja esitleda oma unikaalsust!
-    </p>
-    <a href="https://forms.gle/TvUie55PNL7rpH7o6" class="btn btn-lg" 
-       style="background-color: #ea00ff; color: black; font-weight: 600; border: none;">
-      Registreeru disainerina
-    </a>
-  </div>
-</section>
-
-
-
-
-
-
-  </div>
-</div>
-<br>
-
-<!-- Suportters Section -->
-
-</section>
-
-<div class="section-header"></div>
-     <div class="section-header">
-          <h2>TOETAJAD</h2>
-
-<section id="Supporters" class="py-5 bg-pink-light">
-  <div class="container text-center">
-
-
-    <div class="row g-4">
-      <div class="col-6 col-md-3">
-        <div class="supporter-card p-3 rounded shadow-sm">
-          <img src="abakhan_toetaja.png" class="img-fluid rounded mb-2 supporter-img" alt="Supporter 1">
-          <h5 class="text-pink-darker fw-semibold">Abakhan Fabrics Eesti</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="supporter-card p-3 rounded shadow-sm">
-          <img src="mull_toetaja.png" class="img-fluid rounded mb-2 supporter-img" alt="Supporter 2">
-          <h5 class="text-pink-darker fw-semibold">MULL° drinks</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="supporter-card p-3 rounded shadow-sm">
-          <img src="TOETAJA_ARTIS.png" class="img-fluid rounded mb-2 supporter-img" alt="Supporter 3">
-          <h5 class="text-pink-darker fw-semibold">Kino Artis</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="supporter-card p-3 rounded shadow-sm">
-          <img src="SVENSKY_PROMO.png" class="img-fluid rounded mb-2 supporter-img" alt="Supporter 4">
-          <h5 class="text-pink-darker fw-semibold">Svensky Kaubanduse AS</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-header"></div>
-   
-    
-      
-  
-
-
-
-
-
-     <!--==========================
-      section swap
-    ============================-->
-    <div id="scrolling-text2" class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
- <span>[ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ]<span id="invis">ㅤ</span></span>
-          <span>[ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ][ IMPULSS ]</span>
-  </div>
-
-
-  <!--==========================
-    Footer
-  ============================-->
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 footer-info text-start">
-          <img src="valge logo no BG - Copy.png" alt="logo2" class="logo">
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-contact text-start">
-          <h4>Kontakt:</h4>
-          <p style="text-align: left;"  >
-            
-            Vabaõhumuuseumi tee 8, 13521 Tallinn, Eesti <br>
-            <strong>Telefon:</strong> +372 5555 6760<br>
-            <strong>Email:</strong> roosadkaarid@gmail.com<br>
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</footer><!-- #footer -->
-s
-  <!-- JavaScript Libraries -->
-  <script src="./Roosad käärid 2025_files/jquery.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/jquery-migrate.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/bootstrap.bundle.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/easing.min.js.download"></script>
-  <!--<script src="lib/superfish/hoverIntent.js"></script>-->
-  <script src="./Roosad käärid 2025_files/superfish.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/wow.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/venobox.min.js.download"></script>
-  <script src="./Roosad käärid 2025_files/owl.carousel.min.js.download"></script>
-
-
-  <!-- Template Main Javascript File -->
-  <script src="./Roosad käärid 2025_files/main.js.download"></script>
-
-  <script src="./Roosad käärid 2025_files/embed.js.download"></script> 
-
+  </main>
+</body>
+</html>
