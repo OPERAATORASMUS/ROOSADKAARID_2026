@@ -63,6 +63,56 @@
       pointer-events: none;
     }
 
+    .glitch-intro {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.94);
+      pointer-events: none;
+      animation: glitch-intro-exit 450ms ease-out forwards;
+    }
+
+    .glitch-intro span {
+      font-family: "Raleway", Arial, sans-serif;
+      font-size: 160px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0;
+      color: var(--pink);
+      text-shadow: -5px 0 #ffffff, 5px 0 #00e5cc;
+      animation: glitch-intro-shift 450ms steps(1, end) forwards;
+    }
+
+    @keyframes glitch-intro-shift {
+      0%, 45% { transform: translateX(-4px) skewX(-5deg); }
+      20%, 65% { transform: translateX(4px) skewX(5deg); }
+      85%, 100% { transform: none; }
+    }
+
+    @keyframes glitch-intro-exit {
+      0%, 75% { opacity: 1; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    @media (max-width: 1000px) {
+      .glitch-intro span { font-size: 100px; }
+    }
+
+    @media (max-width: 640px) {
+      .glitch-intro span { font-size: 64px; }
+    }
+
+    @media (max-width: 320px) {
+      .glitch-intro span { font-size: 48px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .glitch-intro { display: none; }
+    }
+
     .page {
       position: relative;
       z-index: 2;
@@ -87,6 +137,30 @@
 
     .coming-soon span {
       display: block;
+    }
+
+    .coming-soon .glitch-char {
+      position: relative;
+      display: inline-block;
+      white-space: pre;
+    }
+
+    .glitch-char.is-scrambling {
+      color: transparent;
+      text-shadow: none;
+    }
+
+    .glitch-char.is-scrambling::after {
+      content: attr(data-glyph);
+      position: absolute;
+      inset: 0;
+      color: var(--pink);
+      text-align: center;
+      text-shadow: -2px 0 #ffffff, 2px 0 #00e5cc;
+    }
+
+    .soon .glitch-char.is-scrambling::after {
+      color: var(--white);
     }
 
     .event-name {
@@ -209,6 +283,7 @@
   </style>
 </head>
 <body>
+  <div class="glitch-intro" aria-hidden="true"><span>GLITCH</span></div>
   <video class="video-background" autoplay muted loop playsinline aria-hidden="true">
     <source src="tasustavideo.mp4" type="video/mp4">
   </video>
@@ -245,6 +320,66 @@
     }
 
     requestAnimationFrame(loopBeforeCredits);
+  </script>
+  <script>
+    const heading = document.querySelector(".coming-soon");
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*+/<>";
+    const rows = Array.from(heading.children);
+    let glitchTimer;
+    let glitchInterval;
+
+    heading.setAttribute("aria-label", rows.map(row => row.textContent).join(" "));
+
+    rows.forEach(row => {
+      row.setAttribute("aria-hidden", "true");
+      const characters = Array.from(row.textContent, character => {
+        const span = document.createElement("span");
+        span.className = "glitch-char";
+        span.textContent = character;
+        return span;
+      });
+      row.replaceChildren(...characters);
+    });
+
+    function resetGlitch() {
+      clearTimeout(glitchTimer);
+      clearInterval(glitchInterval);
+      heading.querySelectorAll(".is-scrambling").forEach(character => {
+        character.classList.remove("is-scrambling");
+        delete character.dataset.glyph;
+      });
+    }
+
+    function scheduleGlitch() {
+      resetGlitch();
+      if (reducedMotion.matches || document.hidden) return;
+
+      glitchTimer = setTimeout(() => {
+        const characters = rows.flatMap(row => Array.from(row.children));
+        const started = performance.now();
+
+        function scramble() {
+          const progress = (performance.now() - started) / 850;
+          characters.forEach((character, index) => {
+            const scrambled = character.textContent.trim() !== "" &&
+              progress < 0.3 + (index / characters.length) * 0.7;
+            character.classList.toggle("is-scrambling", scrambled);
+            if (scrambled) {
+              character.dataset.glyph = glyphs[Math.floor(Math.random() * glyphs.length)];
+            }
+          });
+          if (progress >= 1) scheduleGlitch();
+        }
+
+        glitchInterval = setInterval(scramble, 65);
+        scramble();
+      }, 2000 + Math.random() * 3000);
+    }
+
+    reducedMotion.addEventListener("change", scheduleGlitch);
+    document.addEventListener("visibilitychange", scheduleGlitch);
+    scheduleGlitch();
   </script>
 </body>
 </html>
