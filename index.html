@@ -33,29 +33,39 @@
       overflow-x: hidden;
     }
 
+    .video-background {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      background: rgba(12, 0, 14, 0.62);
+      pointer-events: none;
+    }
+
     .brand-logo {
       position: fixed;
+      z-index: 2;
       top: clamp(20px, 4vw, 44px);
       left: clamp(18px, 4vw, 46px);
       width: clamp(70px, 9vw, 120px);
       aspect-ratio: 1;
-      background-image: url("roosade logo mustal taustal.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      overflow: hidden;
-    }
-
-    .brand-logo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: var(--pink);
-      mix-blend-mode: multiply;
+      background: transparent url("roosad-logo-transparent.png") center / contain no-repeat;
       pointer-events: none;
     }
 
     .page {
+      position: relative;
+      z-index: 2;
       display: grid;
       width: 100%;
       min-height: 100vh;
@@ -199,6 +209,10 @@
   </style>
 </head>
 <body>
+  <video class="video-background" autoplay muted loop playsinline aria-hidden="true">
+    <source src="tasustavideo.mp4" type="video/mp4">
+  </video>
+
   <div class="brand-logo" aria-hidden="true"></div>
 
   <main class="page">
@@ -213,5 +227,24 @@
       <a class="email-button" href="mailto:roosadkaarid@gmail.com">Kirjuta meile</a>
     </section>
   </main>
+  <script>
+    const backgroundVideo = document.querySelector(".video-background");
+
+    function loopBeforeCredits() {
+      if (
+        !backgroundVideo.paused &&
+        !backgroundVideo.seeking &&
+        Number.isFinite(backgroundVideo.duration) &&
+        backgroundVideo.duration > 2 &&
+        backgroundVideo.currentTime >= backgroundVideo.duration - 2
+      ) {
+        backgroundVideo.currentTime = 0;
+      }
+
+      requestAnimationFrame(loopBeforeCredits);
+    }
+
+    requestAnimationFrame(loopBeforeCredits);
+  </script>
 </body>
 </html>
