@@ -185,16 +185,34 @@
       text-shadow: none;
     }
 
+    .contact-sections {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+      width: min(100%, 720px);
+      margin: clamp(22px, 6vh, 48px) auto 0;
+      align-items: stretch;
+      gap: 16px;
+    }
+
+    .contact-divider {
+      background: var(--pink);
+    }
+
     .contact {
       display: flex;
-      width: min(100%, 520px);
-      margin: clamp(22px, 6vh, 48px) auto 0;
+      min-width: 0;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       gap: 14px;
       color: var(--white);
       font-size: 0.85rem;
       line-height: 1.45;
+    }
+
+    .contact.designer-registration {
+      justify-content: center;
+      gap: 8px;
     }
 
     .contact p {
@@ -276,8 +294,15 @@
         font-size: 0.75rem;
       }
 
+      .contact-sections {
+        gap: 8px;
+      }
+
       .email-button {
         width: auto;
+        max-width: 100%;
+        padding: 12px 14px;
+        font-size: 12px;
       }
     }
   </style>
@@ -297,10 +322,17 @@
       <span class="soon">coming soon</span>
     </h1>
 
-    <section class="contact" aria-label="Koostöö kontakt">
-      <p>Koostöösoovide korral kirjutage meile:<br><a class="email-link" href="mailto:roosadkaarid@gmail.com">roosadkaarid@gmail.com</a></p>
-      <a class="email-button" href="mailto:roosadkaarid@gmail.com">Kirjuta meile</a>
-    </section>
+    <div class="contact-sections">
+      <section class="contact" aria-label="Koostöö kontakt">
+        <p>Koostöösoovide korral kirjutage meile:<br><a class="email-link" href="mailto:roosadkaarid@gmail.com">roosadkaarid@gmail.com</a></p>
+        <a class="email-button" href="mailto:roosadkaarid@gmail.com">Kirjuta meile</a>
+      </section>
+      <div class="contact-divider" aria-hidden="true"></div>
+      <section class="contact designer-registration" aria-label="Disaineriks registreerimine">
+        <p>Tule meile disaineriks!</p>
+        <a class="email-button" href="https://forms.gle/7vBNgaJhNKVxMTiz8" target="_blank" rel="noopener noreferrer">Registreeri</a>
+      </section>
+    </div>
   </main>
   <script>
     const backgroundVideo = document.querySelector(".video-background");
